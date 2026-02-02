@@ -1,0 +1,73 @@
+.flow-canvas-wrapper {
+    position: absolute;
+    inset: 0;
+    background-color: #0c0c0c;
+}
+
+.flow-canvas-wrapper .react-flow {
+    background-color: #0c0c0c;
+}
+
+/* Edge Styles - Bezier curved lines like Flora */
+.react-flow__edge-path {
+    stroke: rgba(255, 255, 255, 0.25);
+    stroke-width: 3;
+    fill: none;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+    stroke: var(--brand-accent);
+}
+
+.react-flow__edge:hover .react-flow__edge-path {
+    stroke: rgba(255, 255, 255, 0.4);
+}
+
+/* Connection Line while dragging */
+.react-flow__connection-line {
+    stroke: var(--brand-accent);
+    stroke-width: 2;
+}
+
+/* Handle Styles - Plus button style like Flora */
+.react-flow__handle {
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.react-flow__node:hover .react-flow__handle {
+    opacity: 1;
+}
+
+.react-flow__handle-right {
+    right: -32px;
+}
+
+.react-flow__handle-left {
+    left: -32px;
+}
+
+/* Selection Box */
+.react-flow__selection {
+    background: rgba(0, 217, 255, 0.08);
+    border: 1px solid var(--brand-accent);
+}
+
+/* Pane */
+.react-flow__pane {
+    cursor: pointer;
+}
+
+.react-flow__pane:active {
+    cursor: grabbing;
+}
+
+/* Background pattern */
+.react-flow__background-pattern {
+    fill: #888888;
+}

@@ -1,0 +1,333 @@
+.model-selector {
+    position: relative;
+    z-index: 1000;
+}
+
+.model-trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.model-trigger:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.model-trigger.open {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(34, 197, 94, 0.5);
+}
+
+.model-trigger.compact {
+    padding: 4px 8px;
+    font-size: 11px;
+}
+
+.trigger-chevron {
+    color: var(--text-secondary);
+    transition: transform 0.2s;
+}
+
+.trigger-chevron.rotated {
+    transform: rotate(90deg);
+}
+
+/* Dropdown */
+.model-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 300px;
+    max-height: 480px;
+    background: #141414;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Search */
+.dropdown-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    flex-shrink: 0;
+}
+
+.dropdown-search svg {
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+
+.dropdown-search input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 14px;
+}
+
+.dropdown-search input::placeholder {
+    color: var(--text-secondary);
+}
+
+/* Auto Toggle */
+.auto-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+
+.toggle-switch {
+    width: 40px;
+    height: 22px;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 11px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.toggle-switch.on {
+    background: #22c55e;
+}
+
+.toggle-knob {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.toggle-switch.on .toggle-knob {
+    transform: translateX(18px);
+}
+
+/* Divider */
+.dropdown-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    flex-shrink: 0;
+}
+
+/* Sections */
+.dropdown-section {
+    padding: 12px 16px 6px;
+    flex-shrink: 0;
+}
+
+.section-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+}
+
+.section-hint {
+    font-size: 12px;
+    color: var(--text-secondary);
+    opacity: 0.6;
+    margin: 4px 0 0 0;
+}
+
+/* Providers List - SCROLLABLE */
+.providers-list {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: visible;
+    padding: 4px 8px 8px;
+    min-height: 0;
+}
+
+.provider-group {
+    position: relative;
+}
+
+.provider-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.provider-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.provider-item.expanded {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.provider-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.provider-name {
+    flex: 1;
+    text-align: left;
+}
+
+.selected-model-badge {
+    padding: 3px 8px;
+    background: #22c55e;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    color: black;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.provider-chevron {
+    color: var(--text-secondary);
+    flex-shrink: 0;
+}
+
+/* Models Submenu - FIXED POSITION */
+.models-submenu {
+    position: fixed;
+    width: 280px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    padding: 6px;
+    z-index: 10000;
+    margin-left: 290px;
+    margin-top: -44px;
+}
+
+.model-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 10px 12px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.15s;
+    position: relative;
+    text-align: left;
+}
+
+.model-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.model-item.selected {
+    background: rgba(34, 197, 94, 0.12);
+}
+
+.model-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.model-item-name {
+    font-size: 13px;
+    font-weight: 500;
+    flex: 1;
+}
+
+.model-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.model-credits,
+.model-time {
+    font-size: 11px;
+    color: var(--text-secondary);
+    padding: 2px 6px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+}
+
+.model-description {
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.selected-check {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    color: #22c55e;
+}
+
+/* Scrollbar for dropdown */
+.providers-list::-webkit-scrollbar,
+.models-submenu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.providers-list::-webkit-scrollbar-track,
+.models-submenu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.providers-list::-webkit-scrollbar-thumb,
+.models-submenu::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 3px;
+}
+
+.providers-list::-webkit-scrollbar-thumb:hover,
+.models-submenu::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+}

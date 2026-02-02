@@ -1,0 +1,85 @@
+.workstation-top-aside {
+    position: absolute;
+    left: 24px;
+    top: 24px;
+    z-index: 100;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    user-select: none;
+}
+
+.top-bar-btn {
+    height: 32px;
+    /* h-8 roughly */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0 8px;
+    transition: background 0.2s;
+}
+
+.top-bar-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    /* hover:bg-white/[1%] */
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+}
+
+.logo-wrapper svg {
+    width: 20px;
+    height: 20px;
+}
+
+.chevron {
+    color: var(--text-secondary);
+}
+
+.top-bar-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-name-wrapper {
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.project-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 0 16px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+
+.workspace-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: -8px;
+    /* Alignment tweak */
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+}
+
+.workspace-breadcrumb:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+}

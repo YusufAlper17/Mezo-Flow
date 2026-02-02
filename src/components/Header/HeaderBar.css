@@ -1,0 +1,127 @@
+.header-bar {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    right: 24px;
+    z-index: 100;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.header-bar>* {
+    pointer-events: auto;
+}
+
+.header-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.logo-menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.logo-menu-btn:hover {
+    color: white;
+}
+
+.logo-small {
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, var(--brand-accent), var(--brand-end));
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.project-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    padding: 4px 8px;
+    margin-left: -8px;
+    border-radius: 6px;
+    transition: background 0.2s;
+    text-shadow: 0 0 16px rgba(0, 0, 0, 0.75);
+}
+
+.project-name:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.project-name-input {
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--brand-accent);
+    border-radius: 6px;
+    padding: 4px 8px;
+    margin-left: -8px;
+    outline: none;
+    font-family: inherit;
+}
+
+.breadcrumb-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    margin-left: -8px;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    color: var(--text-secondary);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.breadcrumb-btn:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.share-btn {
+    padding: 8px 16px;
+    background: #22c55e;
+    border: none;
+    border-radius: 8px;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.share-btn:hover {
+    filter: brightness(1.1);
+}

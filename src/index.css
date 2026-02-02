@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Flora Theme Colors */
+  --background: #0c0c0c;
+  --surface: #141414;
+  --surface-hover: #1a1a1a;
+  --border: rgba(255, 255, 255, 0.05);
+  --border-secondary: rgba(255, 255, 255, 0.1);
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --brand-accent: #00d9ff;
+  --brand-start: #6366f1;
+  --brand-end: #ec4899;
+
+  /* Flora Canvas Colors */
+  --canvas-bg: #0c0c0c;
+  --node-bg: rgba(0, 0, 0, 0.4);
+  --toolbar-bg: rgba(0, 0, 0, 0.6);
+
+  /* Spacing */
+  --sidebar-width: 240px;
+  --header-height: 64px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* React Flow Overrides */
+.react-flow__background {
+  background-color: var(--canvas-bg) !important;
+}
+
+.react-flow__background pattern circle {
+  fill: #888888 !important;
+}
+
+.react-flow__controls {
+  display: none;
+}
+
+.react-flow__minimap {
+  display: none !important;
+}
